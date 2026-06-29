@@ -21,4 +21,4 @@
 - [ ] Design token integration — export Figma variables → tokens/, wire into ThemeProvider
 - [ ] Vercel deployment
 - [ ] Storybook — install, configure for Next.js 16 + Emotion
-- [ ] Git hygiene — lint-staged, husky, ignore files
+- [ ] Git hygiene — husky, commitlint, lint-staged, ignore files
