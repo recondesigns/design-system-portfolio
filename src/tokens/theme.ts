@@ -1,6 +1,7 @@
 import { primitives, color } from './colors'
 import {
   fontFamily,
+  fontStyle,
   fontWeight,
   fontSize,
   lineHeight,
@@ -18,6 +19,7 @@ export const theme = {
   color,
   opacity,
   fontFamily,
+  fontStyle,
   fontWeight,
   fontSize,
   lineHeight,
