@@ -2,6 +2,7 @@
 
 import styled from '@emotion/styled'
 import type { TablerIcon } from '@tabler/icons-react'
+import { color } from '@/tokens/colors'
 import Icon from '@/components/Icon'
 
 export type IconButtonState = 'default' | 'accent'
@@ -57,7 +58,7 @@ export default function IconButton({
   onClick,
   className,
 }: IconButtonProps) {
-  const iconColor = state === 'accent' ? '#ffffff' : undefined
+  const iconColor = state === 'accent' ? color.text.onAccent : undefined
 
   return (
     <StyledIconButton

@@ -119,7 +119,7 @@ export default function Header() {
         </Nav>
 
         <HamburgerButton
-          aria-label="Open navigation"
+          aria-label={isSidebarOpen ? 'Close navigation' : 'Open navigation'}
           aria-expanded={isSidebarOpen}
           aria-controls="sidebar"
           onClick={toggleSidebar}

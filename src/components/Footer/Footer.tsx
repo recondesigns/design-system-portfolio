@@ -89,7 +89,7 @@ const EmailLink = styled.a`
     ${({ theme }) => theme.transition.easing.standard};
 
   &:hover {
-    opacity: 0.8;
+    opacity: ${({ theme }) => theme.opacity.hover};
   }
 
   &:focus-visible {

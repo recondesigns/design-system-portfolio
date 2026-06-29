@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { IconArrowUpRight } from '@tabler/icons-react'

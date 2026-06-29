@@ -121,7 +121,7 @@ const Portrait = styled.div`
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: ${({ theme }) => theme.radius[6]}px;
-  background-color: ${({ theme }) => theme.color.background.nav};
+  background-color: ${({ theme }) => theme.color.border.link};
 `
 
 export default function Hero() {
