@@ -27,10 +27,15 @@ export const fontSize = {
 
 export const lineHeight = {
   display: 98,
+  displayStat: 64,
   heading1: 52,
   bodyLead: 28,
   bodyDefault: 24,
   bodySmall: 20,
+  labelEyebrow: 12,
+  labelTag: 12,
+  labelDefault: 12,
+  labelStat: 12,
 } as const
 
 export const letterSpacing = {
@@ -38,4 +43,10 @@ export const letterSpacing = {
   displayStat: '-1px',
   label: '1px',
   labelEyebrow: '2px',
+  caption: '1px',
+} as const
+
+export const fontStyle = {
+  normal: 'normal',
+  italic: 'italic',
 } as const

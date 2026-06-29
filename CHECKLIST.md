@@ -20,7 +20,8 @@
 - [x] Emotion — installed with Next.js 16 SSR integration, Button component
 - [x] Design token integration — Figma variables → src/tokens/, Emotion ThemeProvider
 - [x] Storybook — Storybook 10, nextjs-vite, ThemeProvider decorator, Button stories
-- [ ] Vercel deployment
+- [x] Vercel deployment — connected to GitHub, auto-deploys on merge to main
+- [x] Basic page content — hero section with Emotion-styled components wired to theme
 - [ ] Git hygiene — husky, commitlint, lint-staged, ignore files
 - [ ] Build components (referencing Figma handoff frames)
 - [ ] Final polish + launch
