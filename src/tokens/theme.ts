@@ -11,6 +11,7 @@ import { breakpoints, mediaQuery } from './breakpoints'
 
 export const opacity = {
   muted: 0.5,
+  hover: 0.8,
   nav: 0.85,
 } as const
 

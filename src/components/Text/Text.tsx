@@ -1,3 +1,5 @@
+'use client'
+
 import type { ElementType } from 'react'
 import styled from '@emotion/styled'
 import type { Theme } from '@/tokens/theme'

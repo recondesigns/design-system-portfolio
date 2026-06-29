@@ -57,6 +57,7 @@ export const color = {
     accent: '#c8783a',
     secondary: '#8a9e8f',
     disabled: '#a9b7ac',
+    onAccent: '#ffffff',
   },
   border: {
     default: '#8a9e8f',
