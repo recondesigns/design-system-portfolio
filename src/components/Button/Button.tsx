@@ -24,8 +24,8 @@ const StyledButton = styled.button<{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
+  font-family: ${({ theme }) => theme.fontFamily.body};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   letter-spacing: 0.01em;
   border-radius: 2px;
   cursor: pointer;
@@ -36,21 +36,21 @@ const StyledButton = styled.button<{
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: ${({ theme }) => theme.opacity.muted};
     cursor: not-allowed;
   }
 
-  ${({ variant }) =>
+  ${({ variant, theme }) =>
     variant === 'primary'
       ? `
-        background-color: #1a2b1f;
-        color: #e8e0d0;
+        background-color: ${theme.color.background.inverse};
+        color: ${theme.color.text.inverse};
         border: none;
       `
       : `
         background-color: transparent;
-        color: #1a2b1f;
-        border: 1.5px solid #1a2b1f;
+        color: ${theme.color.text.primary};
+        border: 1.5px solid ${theme.color.border.default};
       `}
 
   ${({ size }) => sizeStyles[size]}
