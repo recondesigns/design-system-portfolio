@@ -45,8 +45,7 @@ const Panel = styled.div<{ $open: boolean }>`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 320px;
-  max-width: 100vw;
+  width: 100%;
   background-color: ${({ theme }) => theme.color.background.inverse};
   z-index: ${({ theme }) => theme.zIndex.sidebar};
   display: flex;
