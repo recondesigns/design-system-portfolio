@@ -11,12 +11,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize
 }
 
-const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'padding: 8px 16px; font-size: 12px;',
-  md: 'padding: 12px 24px; font-size: 14px;',
-  lg: 'padding: 16px 32px; font-size: 16px;',
-}
-
 const StyledButton = styled.button<{
   variant: ButtonVariant
   size: ButtonSize
@@ -29,7 +23,8 @@ const StyledButton = styled.button<{
   letter-spacing: 0.01em;
   border-radius: 2px;
   cursor: pointer;
-  transition: opacity 150ms ease;
+  transition: opacity ${({ theme }) => theme.transition.duration.fast}ms
+    ${({ theme }) => theme.transition.easing.standard};
 
   &:hover:not(:disabled) {
     opacity: 0.85;
@@ -53,7 +48,15 @@ const StyledButton = styled.button<{
         border: 1.5px solid ${theme.color.border.default};
       `}
 
-  ${({ size }) => sizeStyles[size]}
+  ${({ size, theme }) => {
+    const s = theme.spacing
+    const fs = theme.fontSize
+    if (size === 'sm')
+      return `padding: ${s[8]}px ${s[16]}px; font-size: ${fs.labelDefault}px;`
+    if (size === 'lg')
+      return `padding: ${s[16]}px ${s[32]}px; font-size: ${fs.bodyDefault}px;`
+    return `padding: ${s[12]}px ${s[24]}px; font-size: ${fs.bodySmall}px;`
+  }}
 `
 
 export default function Button({
