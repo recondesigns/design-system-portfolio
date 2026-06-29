@@ -17,8 +17,10 @@
 - [x] TypeScript — strict + noUncheckedIndexedAccess, exactOptionalPropertyTypes, noImplicitReturns, noFallthroughCasesInSwitch, verbatimModuleSyntax, noPropertyAccessFromIndexSignature
 - [x] ESLint — core-web-vitals + typescript, no-explicit-any, consistent-type-imports, no-console, self-closing-comp
 - [x] Prettier — .prettierrc, eslint-config-prettier, format + format:check scripts
-- [ ] Emotion — install with Next.js 16 SSR integration
-- [ ] Design token integration — export Figma variables → tokens/, wire into ThemeProvider
+- [x] Emotion — installed with Next.js 16 SSR integration, Button component
+- [x] Design token integration — Figma variables → src/tokens/, Emotion ThemeProvider
+- [x] Storybook — Storybook 10, nextjs-vite, ThemeProvider decorator, Button stories
 - [ ] Vercel deployment
-- [ ] Storybook — install, configure for Next.js 16 + Emotion
 - [ ] Git hygiene — husky, commitlint, lint-staged, ignore files
+- [ ] Build components (referencing Figma handoff frames)
+- [ ] Final polish + launch
