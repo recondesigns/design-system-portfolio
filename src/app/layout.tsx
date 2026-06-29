@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import EmotionRegistry from '@/lib/emotion-registry'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Sidebar from '@/components/Sidebar'
 import './globals.css'
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -33,7 +36,12 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${dmSans.variable}`}
     >
       <body>
-        <EmotionRegistry>{children}</EmotionRegistry>
+        <EmotionRegistry>
+          <Header />
+          <Sidebar />
+          <main>{children}</main>
+          <Footer />
+        </EmotionRegistry>
       </body>
     </html>
   )

@@ -15,25 +15,21 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding-top: ${({ theme }) => theme.spacing[32]}px;
-  padding-bottom: ${({ theme }) => theme.spacing[32]}px;
+  padding: ${({ theme }) => theme.spacing[40]}px ${({ theme }) => theme.spacing[24]}px;
   text-decoration: none;
   border-bottom: 1px solid ${({ theme }) => theme.color.border.inverse};
-  transition: opacity ${({ theme }) => theme.transition.duration.fast}ms
-    ${({ theme }) => theme.transition.easing.standard};
+  &:active {
+    border-color: ${({ theme }) => theme.color.interactive.accent};
+  }
 
-  &:hover {
-    opacity: 0.8;
+  &:active .sidebar-nav-arrow {
+    color: ${({ theme }) => theme.color.text.accent};
   }
 
   &:focus-visible {
     outline: 2px solid ${({ theme }) => theme.color.interactive.accent};
     outline-offset: 2px;
     border-radius: 2px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
   }
 `
 
@@ -67,7 +63,7 @@ export default function SidebarNavItem({
           </Text>
         )}
       </LabelGroup>
-      <IconWrapper>
+      <IconWrapper className="sidebar-nav-arrow">
         <Icon icon={IconArrowUpRight} size="icon" />
       </IconWrapper>
     </StyledLink>
