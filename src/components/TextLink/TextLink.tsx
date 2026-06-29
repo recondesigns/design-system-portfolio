@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { IconArrowUpRight } from '@tabler/icons-react'
@@ -12,7 +14,7 @@ export interface TextLinkProps {
   children: React.ReactNode
 }
 
-const StyledAnchor = styled.a<{ $underline: boolean }>`
+const StyledAnchor = styled.a<{ $external: boolean; $underline: boolean }>`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing[4]}px;
@@ -20,18 +22,28 @@ const StyledAnchor = styled.a<{ $underline: boolean }>`
   font-size: ${({ theme }) => theme.fontSize.labelDefault}px;
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   line-height: ${({ theme }) => theme.lineHeight.labelDefault}px;
-  letter-spacing: ${({ theme }) => theme.letterSpacing.label};
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.color.text.secondary};
   text-decoration: none;
-  border-bottom: ${({ $underline, theme }) =>
-    $underline ? `1px solid ${theme.color.border.inverse}` : 'none'};
-  padding-bottom: ${({ $underline }) => ($underline ? '2px' : '0')};
   transition: color ${({ theme }) => theme.transition.duration.fast}ms
     ${({ theme }) => theme.transition.easing.standard};
 
+  ${({ $external, $underline, theme }) =>
+    $external
+      ? `
+    color: ${theme.color.text.inverse};
+    border-bottom: 1px solid ${theme.color.border.link};
+    padding-bottom: 2px;
+  `
+      : `
+    letter-spacing: ${theme.letterSpacing.label};
+    text-transform: uppercase;
+    color: ${theme.color.text.secondary};
+    border-bottom: ${$underline ? `1px solid ${theme.color.border.inverse}` : 'none'};
+    padding-bottom: ${$underline ? '2px' : '0'};
+  `}
+
   &:hover {
     color: ${({ theme }) => theme.color.text.inverse};
+    border-bottom-color: transparent;
   }
 
   &:focus-visible {
@@ -53,15 +65,12 @@ export default function TextLink({
   className,
   children,
 }: TextLinkProps) {
-  const sharedProps = {
-    $underline: underline,
-    className,
-  }
+  const showArrow = withArrow || external
 
   const content = (
     <>
       {children}
-      {withArrow && <Icon icon={IconArrowUpRight} size="iconSm" />}
+      {showArrow && <Icon icon={IconArrowUpRight} size="iconSm" />}
     </>
   )
 
@@ -71,7 +80,9 @@ export default function TextLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        {...sharedProps}
+        $external
+        $underline={underline}
+        className={className}
       >
         {content}
       </StyledAnchor>
@@ -79,7 +90,13 @@ export default function TextLink({
   }
 
   return (
-    <StyledAnchor as={Link} href={href} {...sharedProps}>
+    <StyledAnchor
+      as={Link}
+      href={href}
+      $external={false}
+      $underline={underline}
+      className={className}
+    >
       {content}
     </StyledAnchor>
   )
