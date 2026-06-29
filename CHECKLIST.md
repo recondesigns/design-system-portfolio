@@ -18,7 +18,7 @@
 - [x] ESLint — core-web-vitals + typescript, no-explicit-any, consistent-type-imports, no-console, self-closing-comp
 - [x] Prettier — .prettierrc, eslint-config-prettier, format + format:check scripts
 - [x] Emotion — installed with Next.js 16 SSR integration, Button component
-- [x] Design token integration — Figma variables → src/tokens/, Emotion ThemeProvider
+- [x] Design token integration — Figma variables → src/tokens/, Emotion ThemeProvider, verified complete against Figma
 - [x] Storybook — Storybook 10, nextjs-vite, ThemeProvider decorator, Button stories
 - [x] Vercel deployment — connected to GitHub, auto-deploys on merge to main
 - [x] Basic page content — hero section with Emotion-styled components wired to theme

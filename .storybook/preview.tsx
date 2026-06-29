@@ -2,6 +2,7 @@ import type { Preview, Decorator } from '@storybook/nextjs-vite'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
 import createCache from '@emotion/cache'
 import { theme } from '../src/tokens/theme'
+import '../src/app/globals.css'
 
 const emotionCache = createCache({ key: 'css' })
 

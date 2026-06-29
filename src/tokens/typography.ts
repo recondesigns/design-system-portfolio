@@ -1,6 +1,6 @@
 export const fontFamily = {
-  display: "'Cormorant Garamond', Georgia, serif",
-  body: "'DM Sans', system-ui, sans-serif",
+  display: "var(--font-cormorant-garamond), 'Cormorant Garamond', Georgia, serif",
+  body: "var(--font-dm-sans), 'DM Sans', system-ui, sans-serif",
 } as const
 
 export const fontWeight = {

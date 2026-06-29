@@ -39,6 +39,7 @@ export const primitives = {
     900: '#231d16',
     950: '#12100c',
     '100-a12': 'rgba(232, 224, 208, 0.12)',
+    '100-a30': 'rgba(232, 224, 208, 0.3)',
   },
 } as const
 
@@ -56,11 +57,13 @@ export const color = {
     accent: '#c8783a',
     secondary: '#8a9e8f',
     disabled: '#a9b7ac',
+    onAccent: '#ffffff',
   },
   border: {
     default: '#8a9e8f',
     subtle: '#d8e4db',
     inverse: 'rgba(232, 224, 208, 0.12)',
+    link: 'rgba(232, 224, 208, 0.3)',
   },
   interactive: {
     accent: '#c8783a',
