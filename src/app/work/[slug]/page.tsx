@@ -1,4 +1,9 @@
 import { projects } from '@/data/projects'
+import CaseStudyHero from '@/components/CaseStudyHero'
+import { CaseStudyHeroImage, CaseStudyMockups } from '@/components/CaseStudyImages/CaseStudyImages'
+import CaseStudyOverview from '@/components/CaseStudyOverview'
+import CaseStudyProcess from '@/components/CaseStudyProcess'
+import NextProject from '@/components/NextProject'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -15,9 +20,23 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) return null
 
   return (
-    <main style={{ padding: '128px 48px' }}>
-      <h1>{project.title}</h1>
-      <p>{project.subtitle}</p>
-    </main>
+    <>
+      <CaseStudyHero
+        title={project.title}
+        tagline={project.tagline}
+        role={project.role}
+        year={project.year}
+        scope={project.scope}
+        subtitle={project.subtitle}
+      />
+      <CaseStudyHeroImage />
+      <CaseStudyOverview
+        overview={project.overview}
+        metrics={project.metrics}
+      />
+      <CaseStudyProcess phases={project.phases} />
+      <CaseStudyMockups />
+      <NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
+    </>
   )
 }
