@@ -14,6 +14,7 @@ export interface Project {
   projectNumber: string
   title: string
   subtitle: string
+  tag: string
   details: string
   tagline: string
   role: string
@@ -32,6 +33,7 @@ export const projects: Project[] = [
     projectNumber: '01',
     title: 'Helix-33',
     subtitle: 'Design System · Lead',
+    tag: 'Design System · Lead',
     details:
       'Unified system for Northwell: 140 components across web, iOS and Android; six brand themes from one token set.',
     tagline:
@@ -71,6 +73,7 @@ export const projects: Project[] = [
     projectNumber: '02',
     title: 'Prism',
     subtitle: 'Design System · Lead',
+    tag: 'Token Pipeline',
     details:
       'Multi-brand token architecture powering five product lines from a single component library.',
     tagline: 'One library. Five brands. Zero compromises on quality.',
@@ -109,6 +112,7 @@ export const projects: Project[] = [
     projectNumber: '03',
     title: 'Atlas',
     subtitle: 'Design System · Lead',
+    tag: 'Documentation',
     details:
       'Enterprise data-visualization system with accessible charting primitives and a self-serve documentation portal.',
     tagline: 'Making complex data legible — for every user, on every surface.',
@@ -147,6 +151,7 @@ export const projects: Project[] = [
     projectNumber: '04',
     title: 'Lumen',
     subtitle: 'Design System · Lead',
+    tag: 'Accessibility',
     details:
       'Consumer-facing design system scaling a fintech product from MVP to 2M users.',
     tagline: 'The system that grew with the product — never behind, never in the way.',
