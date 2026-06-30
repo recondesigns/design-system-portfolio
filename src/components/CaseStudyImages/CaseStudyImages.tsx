@@ -2,17 +2,25 @@
 
 import styled from '@emotion/styled'
 
-const HeroImagePlaceholder = styled.div`
-  width: 100%;
-  background-color: ${({ theme }) => theme.color.border.link};
-  aspect-ratio: 390 / 440;
+const HeroImageWrapper = styled.div`
+  padding: 0 ${({ theme }) => theme.spacing[24]}px;
 
   ${({ theme }) => theme.mediaQuery.md} {
-    aspect-ratio: 768 / 560;
+    padding: 0 ${({ theme }) => theme.spacing[40]}px;
   }
 
   ${({ theme }) => theme.mediaQuery.xl} {
-    aspect-ratio: 1280 / 720;
+    padding: 0 ${({ theme }) => theme.spacing[48]}px;
+  }
+`
+
+const HeroImagePlaceholder = styled.div`
+  width: 100%;
+  background-color: ${({ theme }) => theme.color.border.link};
+  aspect-ratio: 3 / 2;
+
+  ${({ theme }) => theme.mediaQuery.md} {
+    aspect-ratio: 3 / 1;
   }
 `
 
@@ -35,15 +43,19 @@ const MockupsPlaceholder = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.color.border.link};
   border-radius: ${({ theme }) => theme.radius[6]}px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
 
-  ${({ theme }) => theme.mediaQuery.xl} {
-    aspect-ratio: 16 / 7;
+  ${({ theme }) => theme.mediaQuery.md} {
+    aspect-ratio: 3 / 1;
   }
 `
 
 export function CaseStudyHeroImage() {
-  return <HeroImagePlaceholder aria-hidden="true" />
+  return (
+    <HeroImageWrapper>
+      <HeroImagePlaceholder aria-hidden="true" />
+    </HeroImageWrapper>
+  )
 }
 
 export function CaseStudyMockups() {
