@@ -51,13 +51,13 @@ const Headline = styled.h1`
   font-family: ${({ theme }) => theme.fontFamily.display};
   font-size: 72px;
   font-weight: ${({ theme }) => theme.fontWeight.light};
-  line-height: ${({ theme }) => theme.lineHeight.display}px;
+  line-height: 66px;
   letter-spacing: ${({ theme }) => theme.letterSpacing.display};
   color: ${({ theme }) => theme.color.text.inverse};
 
   ${({ theme }) => theme.mediaQuery.md} {
     font-size: ${({ theme }) => theme.fontSize.display}px;
-    white-space: nowrap;
+    line-height: ${({ theme }) => theme.lineHeight.display}px;
   }
 `
 
