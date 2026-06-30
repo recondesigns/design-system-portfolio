@@ -11,9 +11,13 @@ export const fontWeight = {
 } as const
 
 export const fontSize = {
+  displayXl: 120,
   display: 104,
   displayStat: 64,
+  heading0: 56,
   heading1: 48,
+  tagline: 28,
+  bodyXl: 22,
   bodyLead: 18,
   bodyEmphasis: 16,
   bodyDefault: 16,
@@ -26,9 +30,13 @@ export const fontSize = {
 } as const
 
 export const lineHeight = {
+  displayXl: 112,
   display: 98,
   displayStat: 64,
+  heading0: 60,
   heading1: 52,
+  tagline: 36,
+  bodyXl: 34,
   bodyLead: 28,
   bodyDefault: 24,
   bodySmall: 20,
@@ -41,6 +49,7 @@ export const lineHeight = {
 export const letterSpacing = {
   display: '-2px',
   displayStat: '-1px',
+  tagline: '-0.3px',
   label: '1px',
   labelEyebrow: '2px',
   caption: '1px',
