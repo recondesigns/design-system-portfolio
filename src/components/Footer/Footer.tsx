@@ -63,6 +63,11 @@ const ContactBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing[16]}px;
+
+  ${({ theme }) => theme.mediaQuery.xl} {
+    min-width: 300px;
+    flex-shrink: 0;
+  }
 `
 
 const ContactLabel = styled.span`
