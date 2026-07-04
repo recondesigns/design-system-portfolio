@@ -1,9 +1,9 @@
 'use client'
 
 import styled from '@emotion/styled'
-import type { Project } from '@/data/projects'
+import type { CaseStudy } from '@/lib/content'
 
-type Props = Pick<Project, 'overview' | 'metrics'>
+type Props = Pick<CaseStudy, 'overview' | 'metrics'>
 
 const Outer = styled.section`
   width: 100%;

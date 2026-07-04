@@ -3,7 +3,7 @@
 import styled from '@emotion/styled'
 import TextLink from '@/components/TextLink'
 import ListItem from '@/components/ListItem'
-import { projects } from '@/data/projects'
+import { caseStudies } from '@/lib/content'
 
 const SelectedWorkOuter = styled.section`
   width: 100%;
@@ -67,13 +67,13 @@ export default function SelectedWork() {
         </SectionHeader>
 
         <DesktopList>
-          {projects.map((project) => (
+          {caseStudies.map((project) => (
             <ListItem key={project.slug} size="desktop" {...project} />
           ))}
         </DesktopList>
 
         <MobileList>
-          {projects.map((project) => (
+          {caseStudies.map((project) => (
             <ListItem key={project.slug} size="mobile" {...project} />
           ))}
         </MobileList>

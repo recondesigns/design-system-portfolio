@@ -7,9 +7,9 @@ import { CaseStudyHeroImage, CaseStudyMockups } from '@/components/CaseStudyImag
 import CaseStudyOverview from '@/components/CaseStudyOverview'
 import CaseStudyProcess from '@/components/CaseStudyProcess'
 import NextProject from '@/components/NextProject'
-import { projects } from '@/data/projects'
+import { caseStudies } from '@/lib/content'
 
-const project = projects[0]!
+const project = caseStudies[0]!
 
 function FullCaseStudyPage() {
   return (

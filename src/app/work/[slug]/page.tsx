@@ -1,4 +1,4 @@
-import { projects } from '@/data/projects'
+import { caseStudies } from '@/lib/content'
 import CaseStudyHero from '@/components/CaseStudyHero'
 import { CaseStudyHeroImage, CaseStudyMockups } from '@/components/CaseStudyImages/CaseStudyImages'
 import CaseStudyOverview from '@/components/CaseStudyOverview'
@@ -10,12 +10,12 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }))
+  return caseStudies.map((cs) => ({ slug: cs.slug }))
 }
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project = caseStudies.find((cs) => cs.slug === slug)
 
   if (!project) return null
 
@@ -29,13 +29,13 @@ export default async function ProjectPage({ params }: Props) {
         scope={project.scope}
         subtitle={project.subtitle}
       />
-      <CaseStudyHeroImage />
+      <CaseStudyHeroImage src={project.heroImage} alt={`${project.title} hero`} />
       <CaseStudyOverview
         overview={project.overview}
         metrics={project.metrics}
       />
       <CaseStudyProcess phases={project.phases} />
-      <CaseStudyMockups />
+      <CaseStudyMockups src={project.mockupImage} alt={`${project.title} mockups`} />
       <NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
     </>
   )

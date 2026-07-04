@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:portfolio": "next dev",
+    "dev:portfolio": "velite --watch & next dev",
     "dev:storybook": "storybook dev -p 6006 --no-open",
-    "build": "next build",
+    "build": "velite build && next build",
     "build:storybook": "storybook build",
     "start": "next start",
     "lint": "eslint .",
@@ -20,6 +20,7 @@
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "velite": "^0.4.0",
     "zustand": "^5.0.14"
   },
   "devDependencies": {

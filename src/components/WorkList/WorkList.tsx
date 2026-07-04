@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import ListItem from '@/components/ListItem'
-import { projects } from '@/data/projects'
+import { caseStudies } from '@/lib/content'
 
 const WorkOuter = styled.section`
   width: 100%;
@@ -122,7 +122,7 @@ export default function WorkList() {
 
         <ListContainer>
           <DesktopList>
-            {projects.map((project) => (
+            {caseStudies.map((project) => (
               <ListItem
                 key={project.slug}
                 size="desktop"
@@ -135,7 +135,7 @@ export default function WorkList() {
             ))}
           </DesktopList>
           <MobileList>
-            {projects.map((project) => (
+            {caseStudies.map((project) => (
               <ListItem
                 key={project.slug}
                 size="mobile"

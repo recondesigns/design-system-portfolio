@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import styled from '@emotion/styled'
 
 const HeroImageWrapper = styled.div`
@@ -22,6 +23,12 @@ const HeroImagePlaceholder = styled.div`
   ${({ theme }) => theme.mediaQuery.md} {
     aspect-ratio: 3 / 1;
   }
+`
+
+const StyledHeroImage = styled(Image)`
+  width: 100%;
+  height: auto;
+  display: block;
 `
 
 const MockupsWrapper = styled.div`
@@ -50,18 +57,43 @@ const MockupsPlaceholder = styled.div`
   }
 `
 
-export function CaseStudyHeroImage() {
+const StyledMockupImage = styled(Image)`
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: ${({ theme }) => theme.radius[6]}px;
+`
+
+interface HeroImageProps {
+  src?: string | undefined
+  alt?: string
+}
+
+interface MockupsProps {
+  src?: string | undefined
+  alt?: string
+}
+
+export function CaseStudyHeroImage({ src, alt = '' }: HeroImageProps) {
   return (
     <HeroImageWrapper>
-      <HeroImagePlaceholder aria-hidden="true" />
+      {src ? (
+        <StyledHeroImage src={src} alt={alt} width={1184} height={592} priority />
+      ) : (
+        <HeroImagePlaceholder aria-hidden="true" />
+      )}
     </HeroImageWrapper>
   )
 }
 
-export function CaseStudyMockups() {
+export function CaseStudyMockups({ src, alt = '' }: MockupsProps) {
   return (
     <MockupsWrapper>
-      <MockupsPlaceholder aria-hidden="true" />
+      {src ? (
+        <StyledMockupImage src={src} alt={alt} width={1184} height={592} />
+      ) : (
+        <MockupsPlaceholder aria-hidden="true" />
+      )}
     </MockupsWrapper>
   )
 }
