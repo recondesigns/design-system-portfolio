@@ -56,6 +56,7 @@ export const color = {
     bodyInverse: '#b8c4bb',
     accent: '#c8783a',
     secondary: '#8a9e8f',
+    placeholder: '#5a6e5f',
     disabled: '#a9b7ac',
     onAccent: '#ffffff',
   },
@@ -63,6 +64,7 @@ export const color = {
     default: '#8a9e8f',
     subtle: '#d8e4db',
     inverse: 'rgba(232, 224, 208, 0.12)',
+    input: 'rgba(232, 224, 208, 0.2)',
     link: 'rgba(232, 224, 208, 0.3)',
   },
   interactive: {
