@@ -29,8 +29,8 @@ const FooterTop = styled.div`
 
   ${({ theme }) => theme.mediaQuery.xl} {
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-end;
+    gap: ${({ theme }) => theme.spacing[96]}px;
     padding-top: ${({ theme }) => theme.spacing[129]}px;
   }
 `
@@ -49,6 +49,7 @@ const Headline = styled.p`
   }
 
   ${({ theme }) => theme.mediaQuery.xl} {
+    flex: 1;
     font-size: ${({ theme }) => theme.fontSize.display}px;
     line-height: ${({ theme }) => theme.lineHeight.display}px;
   }
@@ -63,6 +64,11 @@ const ContactBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing[16]}px;
+
+  ${({ theme }) => theme.mediaQuery.xl} {
+    min-width: 300px;
+    flex-shrink: 0;
+  }
 `
 
 const ContactLabel = styled.span`

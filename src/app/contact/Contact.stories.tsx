@@ -18,6 +18,12 @@ export const Desktop: Story = {
   },
 }
 
+export const Tablet: Story = {
+  parameters: {
+    viewport: { defaultViewport: 'tablet' },
+  },
+}
+
 export const Mobile: Story = {
   parameters: {
     viewport: { defaultViewport: 'mobile1' },

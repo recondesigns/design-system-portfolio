@@ -23,5 +23,6 @@
 - [x] Vercel deployment — connected to GitHub, auto-deploys on merge to main
 - [x] Basic page content — hero section with Emotion-styled components wired to theme
 - [ ] Git hygiene — husky, commitlint, lint-staged, ignore files
+- [ ] Velite — MDX content pipeline for project case studies (frontmatter + typed content collections)
 - [ ] Build components (referencing Figma handoff frames)
 - [ ] Final polish + launch

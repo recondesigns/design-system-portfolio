@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styled from '@emotion/styled'
 import { IconArrowUpRight } from '@tabler/icons-react'
 import Icon from '@/components/Icon'
+import type { Theme } from '@/tokens/theme'
 
 export interface TextLinkProps {
   href: string
@@ -14,40 +15,24 @@ export interface TextLinkProps {
   children: React.ReactNode
 }
 
-const StyledAnchor = styled.a<{ $external: boolean; $underline: boolean }>`
+const sharedBase = (theme: Theme) => `
   display: inline-flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing[4]}px;
-  font-family: ${({ theme }) => theme.fontFamily.body};
-  font-size: ${({ theme }) => theme.fontSize.labelDefault}px;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  line-height: ${({ theme }) => theme.lineHeight.labelDefault}px;
+  gap: ${theme.spacing[4]}px;
+  font-family: ${theme.fontFamily.body};
+  font-size: ${theme.fontSize.labelDefault}px;
+  font-weight: ${theme.fontWeight.regular};
+  line-height: ${theme.lineHeight.labelDefault}px;
   text-decoration: none;
-  transition: color ${({ theme }) => theme.transition.duration.fast}ms
-    ${({ theme }) => theme.transition.easing.standard};
-
-  ${({ $external, $underline, theme }) =>
-    $external
-      ? `
-    color: ${theme.color.text.inverse};
-    border-bottom: 1px solid ${theme.color.border.link};
-    padding-bottom: 2px;
-  `
-      : `
-    letter-spacing: ${theme.letterSpacing.label};
-    text-transform: uppercase;
-    color: ${theme.color.text.secondary};
-    border-bottom: ${$underline ? `1px solid ${theme.color.border.inverse}` : 'none'};
-    padding-bottom: ${$underline ? '2px' : '0'};
-  `}
+  transition: color ${theme.transition.duration.fast}ms ${theme.transition.easing.standard};
 
   &:hover {
-    color: ${({ theme }) => theme.color.text.inverse};
+    color: ${theme.color.text.inverse};
     border-bottom-color: transparent;
   }
 
   &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.color.interactive.accent};
+    outline: 2px solid ${theme.color.interactive.accent};
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -55,6 +40,25 @@ const StyledAnchor = styled.a<{ $external: boolean; $underline: boolean }>`
   @media (prefers-reduced-motion: reduce) {
     transition: none;
   }
+`
+
+const InternalLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== '$underline',
+})<{ $underline: boolean }>`
+  ${({ theme }) => sharedBase(theme)}
+  letter-spacing: ${({ theme }) => theme.letterSpacing.label};
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.color.text.secondary};
+  border-bottom: ${({ $underline, theme }) =>
+    $underline ? `1px solid ${theme.color.border.inverse}` : 'none'};
+  padding-bottom: ${({ $underline }) => ($underline ? '2px' : '0')};
+`
+
+const ExternalAnchor = styled.a`
+  ${({ theme }) => sharedBase(theme)}
+  color: ${({ theme }) => theme.color.text.inverse};
+  border-bottom: 1px solid ${({ theme }) => theme.color.border.link};
+  padding-bottom: 2px;
 `
 
 export default function TextLink({
@@ -76,28 +80,20 @@ export default function TextLink({
 
   if (external) {
     return (
-      <StyledAnchor
+      <ExternalAnchor
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        $external
-        $underline={underline}
         className={className}
       >
         {content}
-      </StyledAnchor>
+      </ExternalAnchor>
     )
   }
 
   return (
-    <StyledAnchor
-      as={Link}
-      href={href}
-      $external={false}
-      $underline={underline}
-      className={className}
-    >
+    <InternalLink href={href} $underline={underline} className={className}>
       {content}
-    </StyledAnchor>
+    </InternalLink>
   )
 }

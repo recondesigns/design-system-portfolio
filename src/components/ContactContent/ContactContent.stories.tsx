@@ -1,16 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
-import AboutPage from './page'
+import ContactContent from './ContactContent'
 
-const meta: Meta<typeof AboutPage> = {
-  title: 'Pages/About',
-  component: AboutPage,
-  parameters: {
-    layout: 'fullscreen',
-  },
+const meta: Meta<typeof ContactContent> = {
+  title: 'Organisms/ContactContent',
+  component: ContactContent,
+  parameters: { layout: 'fullscreen' },
 }
 
 export default meta
-type Story = StoryObj<typeof AboutPage>
+type Story = StoryObj<typeof ContactContent>
 
 export const Desktop: Story = {
   parameters: {

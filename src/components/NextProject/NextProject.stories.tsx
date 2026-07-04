@@ -1,16 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
-import AboutPage from './page'
+import NextProject from './NextProject'
 
-const meta: Meta<typeof AboutPage> = {
-  title: 'Pages/About',
-  component: AboutPage,
+const meta: Meta<typeof NextProject> = {
+  title: 'Organisms/NextProject',
+  component: NextProject,
   parameters: {
     layout: 'fullscreen',
+  },
+  args: {
+    nextSlug: 'prism',
+    nextTitle: 'Prism',
   },
 }
 
 export default meta
-type Story = StoryObj<typeof AboutPage>
+type Story = StoryObj<typeof NextProject>
 
 export const Desktop: Story = {
   parameters: {
