@@ -35,7 +35,7 @@ export default function RootLayout({
       lang="en"
       className={`${cormorantGaramond.variable} ${dmSans.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <EmotionRegistry>
           <Header />
           <Sidebar />

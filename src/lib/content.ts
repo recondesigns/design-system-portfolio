@@ -5,6 +5,11 @@ export interface ProjectMetric {
   label: string
 }
 
+export interface ProjectLink {
+  label: string
+  url: string
+}
+
 export interface ProjectPhase {
   number: string
   title: string
@@ -30,6 +35,7 @@ export interface CaseStudy {
   nextSlug: string
   nextTitle: string
   heroImage?: string
+  links?: ProjectLink[] | undefined
   content: string
 }
 

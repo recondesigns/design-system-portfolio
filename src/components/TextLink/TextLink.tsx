@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import { IconArrowUpRight } from '@tabler/icons-react'
+import { IconArrowUpRight, type TablerIcon } from '@tabler/icons-react'
 import Icon from '@/components/Icon'
 import type { Theme } from '@/tokens/theme'
 
@@ -11,6 +11,7 @@ export interface TextLinkProps {
   external?: boolean
   withArrow?: boolean
   underline?: boolean
+  icon?: TablerIcon | undefined
   className?: string
   children: React.ReactNode
 }
@@ -66,6 +67,7 @@ export default function TextLink({
   external = false,
   withArrow = false,
   underline = false,
+  icon,
   className,
   children,
 }: TextLinkProps) {
@@ -73,6 +75,7 @@ export default function TextLink({
 
   const content = (
     <>
+      {icon && <Icon icon={icon} size="iconSm" />}
       {children}
       {showArrow && <Icon icon={IconArrowUpRight} size="iconSm" />}
     </>
