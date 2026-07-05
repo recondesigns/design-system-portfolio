@@ -111,7 +111,7 @@ export default function WorkList() {
 
         <HeadingContainer>
           <Headline>
-            Four systems. <HeadlineAccent>One practice.</HeadlineAccent>
+            The work. <HeadlineAccent>One practice.</HeadlineAccent>
           </Headline>
           <BodyText>
             A decade of building the infrastructure behind products — the
