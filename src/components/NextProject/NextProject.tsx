@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import type { Project } from '@/data/projects'
+import type { CaseStudy } from '@/lib/content'
 
-type Props = Pick<Project, 'nextSlug' | 'nextTitle'>
+type Props = Pick<CaseStudy, 'nextSlug' | 'nextTitle'>
 
 const Outer = styled.section`
   width: 100%;

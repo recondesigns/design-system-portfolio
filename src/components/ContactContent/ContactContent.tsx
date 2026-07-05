@@ -37,26 +37,6 @@ const Inner = styled.div`
   }
 `
 
-// ---- Section header ----
-
-const SectionHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: ${({ theme }) => theme.spacing[48]}px;
-  border-bottom: 1px solid ${({ theme }) => theme.color.border.input};
-`
-
-const SectionHeaderLabel = styled.span`
-  font-family: ${({ theme }) => theme.fontFamily.body};
-  font-size: ${({ theme }) => theme.fontSize.labelEyebrow}px;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  line-height: ${({ theme }) => theme.lineHeight.labelEyebrow}px;
-  letter-spacing: ${({ theme }) => theme.letterSpacing.labelEyebrow};
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.color.text.secondary};
-`
-
 // ---- Hero ----
 
 const Hero = styled.div`
@@ -389,11 +369,6 @@ export default function ContactContent() {
   return (
     <Outer>
       <Inner>
-        <SectionHeader>
-          <SectionHeaderLabel>Contact</SectionHeaderLabel>
-          <SectionHeaderLabel>Available Q3 2026</SectionHeaderLabel>
-        </SectionHeader>
-
         <Hero>
           <Headline>
             Start a <HeadlineAccent>conversation.</HeadlineAccent>

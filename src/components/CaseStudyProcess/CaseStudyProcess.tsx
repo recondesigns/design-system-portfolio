@@ -1,9 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import styled from '@emotion/styled'
-import type { Project } from '@/data/projects'
+import type { CaseStudy } from '@/lib/content'
 
-type Props = Pick<Project, 'phases'>
+type Props = Pick<CaseStudy, 'phases'>
 
 const Outer = styled.section`
   width: 100%;
@@ -92,6 +93,22 @@ const PhaseBody = styled.p`
   }
 `
 
+const PhaseImagePlaceholder = styled.div`
+  width: 100%;
+  background-color: ${({ theme }) => theme.color.border.link};
+  border-radius: ${({ theme }) => theme.radius[6]}px;
+  aspect-ratio: 16 / 9;
+  margin-top: ${({ theme }) => theme.spacing[16]}px;
+`
+
+const PhaseImage = styled(Image)`
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: ${({ theme }) => theme.radius[6]}px;
+  margin-top: ${({ theme }) => theme.spacing[16]}px;
+`
+
 export default function CaseStudyProcess({ phases }: Props) {
   return (
     <Outer>
@@ -104,6 +121,16 @@ export default function CaseStudyProcess({ phases }: Props) {
               <PhaseTitle>{phase.title}</PhaseTitle>
             </PhaseHeader>
             <PhaseBody>{phase.body}</PhaseBody>
+            {phase.image ? (
+              <PhaseImage
+                src={phase.image}
+                alt={`${phase.title} phase`}
+                width={1088}
+                height={612}
+              />
+            ) : (
+              <PhaseImagePlaceholder aria-hidden="true" />
+            )}
           </Phase>
         ))}
       </PhaseList>
