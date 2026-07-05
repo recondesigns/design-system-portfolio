@@ -27,12 +27,12 @@ const caseStudies = defineCollection({
         number: s.string(),
         title: s.string(),
         body: s.string(),
+        image: s.string().optional(),
       })
     ),
     nextSlug: s.string(),
     nextTitle: s.string(),
     heroImage: s.string().optional(),
-    mockupImage: s.string().optional(),
     content: s.mdx(),
   }),
 })

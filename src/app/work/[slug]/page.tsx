@@ -1,6 +1,6 @@
 import { caseStudies } from '@/lib/content'
 import CaseStudyHero from '@/components/CaseStudyHero'
-import { CaseStudyHeroImage, CaseStudyMockups } from '@/components/CaseStudyImages/CaseStudyImages'
+import { CaseStudyHeroImage } from '@/components/CaseStudyImages/CaseStudyImages'
 import CaseStudyOverview from '@/components/CaseStudyOverview'
 import CaseStudyProcess from '@/components/CaseStudyProcess'
 import NextProject from '@/components/NextProject'
@@ -35,8 +35,7 @@ export default async function ProjectPage({ params }: Props) {
         metrics={project.metrics}
       />
       <CaseStudyProcess phases={project.phases} />
-      <CaseStudyMockups src={project.mockupImage} alt={`${project.title} mockups`} />
-      <NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
+<NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
     </>
   )
 }

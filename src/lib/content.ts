@@ -9,6 +9,7 @@ export interface ProjectPhase {
   number: string
   title: string
   body: string
+  image?: string | undefined
 }
 
 export interface CaseStudy {
@@ -29,7 +30,6 @@ export interface CaseStudy {
   nextSlug: string
   nextTitle: string
   heroImage?: string
-  mockupImage?: string
   content: string
 }
 

@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import Footer from '@/components/Footer'
 import CaseStudyHero from '@/components/CaseStudyHero'
-import { CaseStudyHeroImage, CaseStudyMockups } from '@/components/CaseStudyImages/CaseStudyImages'
+import { CaseStudyHeroImage } from '@/components/CaseStudyImages/CaseStudyImages'
 import CaseStudyOverview from '@/components/CaseStudyOverview'
 import CaseStudyProcess from '@/components/CaseStudyProcess'
 import NextProject from '@/components/NextProject'
@@ -31,8 +31,7 @@ function FullCaseStudyPage() {
           metrics={project.metrics}
         />
         <CaseStudyProcess phases={project.phases} />
-        <CaseStudyMockups />
-        <NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
+<NextProject nextSlug={project.nextSlug} nextTitle={project.nextTitle} />
       </main>
       <Footer />
     </>
