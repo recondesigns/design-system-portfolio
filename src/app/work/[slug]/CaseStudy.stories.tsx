@@ -24,6 +24,7 @@ function FullCaseStudyPage() {
           year={project.year}
           scope={project.scope}
           subtitle={project.subtitle}
+          links={project.links}
         />
         <CaseStudyHeroImage />
         <CaseStudyOverview

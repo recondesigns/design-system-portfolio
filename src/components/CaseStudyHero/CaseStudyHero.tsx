@@ -2,9 +2,13 @@
 
 import Link from 'next/link'
 import styled from '@emotion/styled'
+import ProjectLinks from '@/components/ProjectLinks'
 import type { CaseStudy } from '@/lib/content'
 
-type Props = Pick<CaseStudy, 'title' | 'tagline' | 'role' | 'year' | 'scope' | 'subtitle'>
+type Props = Pick<
+  CaseStudy,
+  'title' | 'tagline' | 'role' | 'year' | 'scope' | 'subtitle' | 'links'
+>
 
 const Outer = styled.div`
   width: 100%;
@@ -153,7 +157,15 @@ const Divider = styled.div`
   }
 `
 
-export default function CaseStudyHero({ title, tagline, role, year, scope, subtitle }: Props) {
+export default function CaseStudyHero({
+  title,
+  tagline,
+  role,
+  year,
+  scope,
+  subtitle,
+  links,
+}: Props) {
   return (
     <Outer>
       <BackLink href="/work">← Work</BackLink>
@@ -161,6 +173,7 @@ export default function CaseStudyHero({ title, tagline, role, year, scope, subti
       <Title>{title}</Title>
       <SubtitleLabel>{subtitle}</SubtitleLabel>
       <Tagline>{tagline}</Tagline>
+      <ProjectLinks links={links} />
       <MetaRow>
         <MetaItem>
           <MetaLabel>Role</MetaLabel>
