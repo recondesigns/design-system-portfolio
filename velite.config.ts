@@ -33,6 +33,15 @@ const caseStudies = defineCollection({
     nextSlug: s.string(),
     nextTitle: s.string(),
     heroImage: s.string().optional(),
+    links: s
+      .array(
+        s.object({
+          label: s.string(),
+          url: s.string(),
+        })
+      )
+      .max(3)
+      .optional(),
     content: s.mdx(),
   }),
 })

@@ -14,6 +14,11 @@ const meta: Meta<typeof CaseStudyHero> = {
     role: 'Lead DS Engineer',
     year: '2024–26',
     scope: 'Web · iOS · Android',
+    links: [
+      { label: 'View in Figma', url: 'https://www.figma.com/@thestedman' },
+      { label: 'View on GitHub', url: 'https://github.com/recondesigns' },
+      { label: 'View in Storybook', url: 'https://storybook.js.org' },
+    ],
   },
 }
 

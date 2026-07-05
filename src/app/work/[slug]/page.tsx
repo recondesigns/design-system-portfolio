@@ -28,6 +28,7 @@ export default async function ProjectPage({ params }: Props) {
         year={project.year}
         scope={project.scope}
         subtitle={project.subtitle}
+        links={project.links}
       />
       <CaseStudyHeroImage src={project.heroImage} alt={`${project.title} hero`} />
       <CaseStudyOverview
