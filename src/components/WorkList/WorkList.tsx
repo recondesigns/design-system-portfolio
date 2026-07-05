@@ -25,23 +25,6 @@ const WorkInner = styled.div`
   }
 `
 
-const LabelRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: ${({ theme }) => theme.spacing[32]}px;
-  border-bottom: 1px solid ${({ theme }) => theme.color.border.inverse};
-`
-
-const SectionLabel = styled.span`
-  font-family: ${({ theme }) => theme.fontFamily.body};
-  font-size: ${({ theme }) => theme.fontSize.labelDefault}px;
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  line-height: ${({ theme }) => theme.lineHeight.labelDefault}px;
-  letter-spacing: ${({ theme }) => theme.letterSpacing.label};
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.color.text.secondary};
-`
 
 const HeadingContainer = styled.div`
   padding-top: ${({ theme }) => theme.spacing[48]}px;
@@ -104,11 +87,6 @@ export default function WorkList() {
   return (
     <WorkOuter>
       <WorkInner>
-        <LabelRow>
-          <SectionLabel>Selected work</SectionLabel>
-          <SectionLabel>2022 — 2026</SectionLabel>
-        </LabelRow>
-
         <HeadingContainer>
           <Headline>
             The work. <HeadlineAccent>One practice.</HeadlineAccent>
