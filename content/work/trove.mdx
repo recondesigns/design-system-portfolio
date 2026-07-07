@@ -1,0 +1,46 @@
+---
+slug: trove
+order: 3
+projectNumber: "03"
+title: Trove
+subtitle: "Design System · Engineer"
+tag: "Design Tokens"
+details: "Design system and component library built to unify six product teams around a typed token pipeline, tested accessibility, and build-time governance."
+tagline: "One token pipeline. Six teams. Zero hardcoded values."
+role: Design System Engineer
+year: "2022–24"
+scope: "Web · React · TypeScript"
+overview: "Trove unified six product teams around a single token pipeline instead of six independent visual languages. Tokens were typed and structured to support white-label theming, ESLint rules enforced token usage over hardcoded values, and every component shipped with jest-axe coverage to keep accessibility from regressing as the system scaled across atomic-design primitives and compound component patterns."
+metrics:
+  - value: "6"
+    label: Product Teams
+  - value: "100%"
+    label: Accessibility Coverage
+  - value: "3"
+    label: Core Team
+phases:
+  - number: "01"
+    title: Audit & Foundation
+    body: "Audited six product teams' existing UI for duplicated components and inconsistent patterns, then set the architecture: atomic-design primitives composed into compound components, built to support white-label theming from day one."
+  - number: "02"
+    title: Design Tokens
+    body: "Built a design token system with generated TypeScript types structured to drive white-label theming across brands — every component consumed only typed tokens, never raw values."
+  - number: "03"
+    title: Accessibility Integration
+    body: "Wired jest-axe into the test suite so every component shipped with automated accessibility coverage, catching regressions in CI before they reached any of the six product teams."
+  - number: "04"
+    title: Documentation & Governance
+    body: "Added ESLint rules enforcing token usage over hardcoded values, turning design consistency from a code-review request into a build-time guarantee."
+  - number: "05"
+    title: Adoption & Feedback
+    body: "Rolled the system out to six product teams, with automated tests and lint rules doing the enforcement work that let feedback focus on real usability gaps instead of policing consistency."
+nextSlug: hitch
+nextTitle: Hitch
+links:
+  - label: View Case Study
+    url: "https://www.chriskennedydesigns.com/classy"
+---
+
+Six product teams. Six ways of solving the same button, the same modal, the same input — with no shared token layer holding any of it together.
+
+Trove closed that gap with a typed token pipeline enforced by ESLint, atomic-design components tested for accessibility with jest-axe on every commit, and compound-component patterns built to support white-label theming across teams without duplicating logic.
