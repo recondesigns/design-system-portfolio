@@ -6,11 +6,11 @@ import { IconArrowUpRight, IconMapPin, IconBriefcase } from '@tabler/icons-react
 import Input from '@/components/Input'
 
 const TOPICS = [
+  'UX Design',
   'Design System',
   'Token Pipeline',
   'Documentation',
   'Accessibility Audit',
-  'Advisory / Speaking',
   'Something else',
 ] as const
 
