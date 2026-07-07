@@ -37,32 +37,35 @@ const CAPABILITIES = [
 ] as const
 
 const RECOGNITION = [
-  'Speaker · Config 2025',
-  "Author · 'Tokens at Scale'",
-  'Mentor · ADPList',
-  'Jury · Awwwards 2024',
+  '1st Place, Design · VetsInTech Hackathon',
+  '2nd Place · VetsInTech Hackathon',
 ] as const
 
 const EXPERIENCE = [
   {
-    title: 'Principal Design Systems Engineer',
-    company: 'Northwind',
-    description: 'Leading Helix across web, iOS and Android.',
+    title: 'Design Systems Engineer',
+    company: 'Independent / Open Source',
+    description: 'Building an open-source, accessibility-first component library for React and Vue.',
   },
   {
-    title: 'Staff Design Technologist',
-    company: 'Cobalt Health',
-    description: 'Token pipelines, docs and accessibility at scale.',
+    title: 'Design Systems Lead',
+    company: 'Rock Island Auction Company',
+    description: 'Built a 34-component library on React Aria, adopted by three teams across six product surfaces.',
   },
   {
-    title: 'Senior Product Designer',
-    company: 'Meridian',
-    description: 'Where design and engineering finally clicked into one craft.',
+    title: 'Design System Engineer',
+    company: 'GoFundMe',
+    description: 'Typed token pipeline and tested component library rolled out to six product teams.',
   },
   {
-    title: 'UX Designer',
-    company: 'Studio Verres',
-    description: 'Agency years — many products, many constraints.',
+    title: 'UX Designer & Frontend Engineer',
+    company: 'Rocket Auction',
+    description: 'Designed and built a Vue component library solo across two apps and their marketing sites.',
+  },
+  {
+    title: 'Frontend Engineer',
+    company: 'V School',
+    description: 'Component library and shared brand foundations supporting the marketing site and LMS.',
   },
 ] as const
 

@@ -1,40 +1,43 @@
 ---
 slug: bespoke-design-system
-order: 3
-projectNumber: "03"
+order: 2
+projectNumber: "02"
 title: Bespoke
 subtitle: "Design System · Lead"
 tag: "Component Library"
-details: "Ground-up design system and component library built to serve a fast-moving product team with no shared UI foundation."
+details: "Ground-up design system and component library serving six product surfaces across three teams, built on React Aria for accessibility by default."
 tagline: "Built from scratch. Built to last."
-role: Lead DS Engineer
-year: "2022–23"
+role: Design Systems Lead
+year: "2024–present"
 scope: "Web · React"
-overview: "Bespoke started with a blank canvas and a product team shipping inconsistent UI across six surfaces. The goal was a component library with enough flexibility to serve every team without becoming a bottleneck for any of them."
+overview: "Bespoke started with six product surfaces running on inconsistent, duplicated UI patterns and no shared foundation. Built as an open component library on top of React Aria, every atom and molecule ships accessible by default — now adopted by three teams across all six surfaces."
 metrics:
-  - value: "60+"
-    label: Components
   - value: "6"
-    label: Product surfaces
+    label: Product Surfaces
+  - value: "3"
+    label: Teams
   - value: "100%"
-    label: Token coverage
+    label: WAI-ARIA Compliant
 phases:
   - number: "01"
-    title: Audit
-    body: "Catalogued six product surfaces to identify recurring patterns, one-offs, and gaps. The audit revealed 23 distinct button variants — the case for consolidation made itself."
+    title: Discovery & Audit
+    body: "Audited existing UI patterns across six product surfaces to identify duplicated components and inconsistent interaction behavior, then benchmarked React Aria as the accessibility foundation before writing a single component."
   - number: "02"
-    title: Foundation
-    body: "Established a token layer for color, typography, spacing, and elevation before writing a single component. Every decision downstream traced back to a named token."
+    title: Foundations & Tokens
+    body: "Established a token layer for color, typography, spacing, and elevation, with React Aria and React Stately providing keyboard interaction, focus management, and ARIA semantics underneath every primitive."
   - number: "03"
-    title: Build
-    body: "Delivered a 60+ component library in React with Storybook documentation and contribution guidelines. Teams were shipping with it within the first sprint."
-nextSlug: helix-33
-nextTitle: Helix-33
+    title: Components & Patterns
+    body: "Built a 34-component library — 16 atoms and 18 composed patterns — from Button and Typography up through compound systems like Data Table and Dialog Modal, each documented in Storybook."
+  - number: "04"
+    title: Implementation & Governance
+    body: "Rolled out to three product teams across six surfaces, with Changesets-driven versioning, Husky/commitlint enforcement, and ~95% test coverage keeping the library stable as adoption grew."
+nextSlug: trove
+nextTitle: Trove
 links:
   - label: View in Storybook
-    url: "https://storybook.js.org"
+    url: "https://riac-design.vercel.app/?path=/docs/welcome-get-started--docs"
 ---
 
-Six product surfaces. No shared component library. Every team maintaining their own button, their own modal, their own interpretation of what the brand meant in code.
+Six product surfaces. No shared component library. Every team maintaining their own button, their own modal, their own interpretation of what accessible meant in code.
 
-Bespoke was built to fix that — not by mandating a system from the top down, but by making the right thing the easy thing.
+Bespoke fixed that by building on React Aria from day one — 34 components, from single atoms to compound systems like Data Table and Dialog Modal, all accessible by default. Three teams have since adopted it across all six surfaces.
